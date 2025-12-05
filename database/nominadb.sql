@@ -12,7 +12,7 @@
 -- 1. CONFIGURACIÓN INICIAL Y LIMPIEZA
 -- Estos comandos se relajan para permitir flexibilidad
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;    
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
 -- Comando para que puedas borrar la base de datos si es necesario (si tienes los privilegios)
@@ -27,12 +27,35 @@ USE `nominadb` ;
 -- -----------------------------------------------------
 
 
+
+
+
 -- Tabla `tipo_nominas` (para especificar que tipo de nomina es. ej: empleado,docente,obrero, etc)
 CREATE TABLE IF NOT EXISTS `nominadb`.`tipo_nominas` (
 `ìd` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
 `descripcion_nomina` VARCHAR(100) NOT NULL,
 PRIMARY KEY (`ìd`)
 );
+
+-- Tabla `tipo_frecuendia_pagos` (para especificar frecuencia con la que se paga. ej: 15 dias, mes, semanal, etc)
+CREATE TABLE IF NOT EXISTS `nominadb`.`tipo_frecuencia_pagos` (
+`ìd` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+`descripcion_frecuencia` VARCHAR(100) NOT NULL,
+PRIMARY KEY (`ìd`)
+);
+
+-- Tabla `tipo_acumulados` (para especificar ciertos tipos de acumulados(no se como se aplica a un ejemplo))
+CREATE TABLE IF NOT EXISTS `nominadb`.`tipo_acumulados` (
+`ìd` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+`descripcion_tipo` VARCHAR(20) NOT NULL,
+`descripcion_acumulado` VARCHAR(100) NOT NULL,
+PRIMARY KEY (`ìd`)
+);
+
+
+
+
+
 
 -- Table `EMPLEADO` (Padre Principal)
 CREATE TABLE IF NOT EXISTS `nominadb`.`EMPLEADO` (
