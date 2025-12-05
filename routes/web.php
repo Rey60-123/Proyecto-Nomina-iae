@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\TipoNominaController;
+use App\Http\Controllers\TipoFrecuenciaPagoController;
+use App\Http\Controllers\TipoAcumuladosController;
 
 
 Route::get('/', function () {
@@ -22,3 +24,7 @@ Route::resource('empleados', EmpleadoController::class);
 //Route::get('/empleados', [EmpleadoController::class, 'index'])->name('empleados.index');
 
 Route::resource('tipo_nominas', TipoNominaController::class);
+
+Route::resource('tipo_frecuencia_pagos' , TipoFrecuenciaPagoController::class);
+
+Route::resource('tipo_acumulados' , TipoAcumuladosController::class);
