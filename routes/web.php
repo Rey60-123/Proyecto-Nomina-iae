@@ -7,6 +7,7 @@ use App\Http\Controllers\TipoFrecuenciaPagoController;
 use App\Http\Controllers\TipoAcumuladosController;
 use App\Http\Controllers\TipoPrestamoController;
 use App\Http\Controllers\TipoAumentoController;
+use App\Http\Controllers\GuarderiaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,3 +39,8 @@ Route::resource('tipo_prestamos', TipoPrestamoController::class);
 
 // Usamos el nombre de recurso adaptado: 'tipos_aumentos'
 Route::resource('tipos_Aumentos', TipoAumentoController::class);
+
+
+
+// Nombre de recurso: 'guarderias'
+Route::resource('Guarderias', GuarderiaController::class);
