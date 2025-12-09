@@ -12,7 +12,7 @@ use App\Http\Controllers\TipoLiquidacionController;
 use App\Http\Controllers\TipoAusenciaController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.pantalla_principal');
 });
 
 
