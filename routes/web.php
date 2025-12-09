@@ -5,6 +5,9 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\TipoNominaController;
 use App\Http\Controllers\TipoFrecuenciaPagoController;
 use App\Http\Controllers\TipoAcumuladosController;
+use App\Http\Controllers\TipoPrestamoController;
+use App\Http\Controllers\TipoAumentoController;
+use App\Http\Controllers\GuarderiaController;
 use App\Http\Controllers\TipoLiquidacionController;
 use App\Http\Controllers\TipoAusenciaController;
 
@@ -30,6 +33,19 @@ Route::resource('tipo_frecuencia_pagos' , TipoFrecuenciaPagoController::class);
 
 Route::resource('tipo_acumulados' , TipoAcumuladosController::class);
 
+Route::resource('tipo_prestamos', TipoPrestamoController::class);
+
+// Ejemplo usando Resource (Recomendado)
+Route::resource('tipo_prestamos', TipoPrestamoController::class);
+
+
+// Usamos el nombre de recurso adaptado: 'tipos_aumentos'
+Route::resource('tipos_Aumentos', TipoAumentoController::class);
+
+
+
+// Nombre de recurso: 'guarderias'
+Route::resource('Guarderias', GuarderiaController::class);
 Route::resource('tipo_Liquidacion', TipoLiquidacionController::class);
 
 Route::resource('tipo_ausencia', TipoAusenciaController::class);
