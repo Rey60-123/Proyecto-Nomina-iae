@@ -12,7 +12,7 @@ use App\Http\Controllers\TipoLiquidacionController;
 use App\Http\Controllers\TipoAusenciaController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.pantalla_principal');
 });
 
 
@@ -33,14 +33,14 @@ Route::resource('tipo_frecuencia_pagos' , TipoFrecuenciaPagoController::class);
 
 Route::resource('tipo_acumulados' , TipoAcumuladosController::class);
 
-Route::resource('tipo_prestamos', TipoPrestamoController::class);
+Route::resource('tipo_ausencias', TipoAusenciaController::class);
 
 // Ejemplo usando Resource (Recomendado)
 Route::resource('tipo_prestamos', TipoPrestamoController::class);
 
 
 // Usamos el nombre de recurso adaptado: 'tipos_aumentos'
-Route::resource('tipos_Aumentos', TipoAumentoController::class);
+Route::resource('tipo_Aumentos', TipoAumentoController::class);
 
 
 

@@ -59,7 +59,7 @@
     </div>
     
     <div class="d-flex justify-content-center pt-3">
-        <a href="{{ route('tipos_Aumentos.create') }}" class="btn btn-primary btn-sm me-2" title="Agregar nuevo registro">
+        <a href="{{ route('tipo_Aumentos.create') }}" class="btn btn-primary btn-sm me-2" title="Agregar nuevo registro">
             Agregar
         </a>
         

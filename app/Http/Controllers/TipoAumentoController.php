@@ -31,7 +31,7 @@ class TipoAumentoController extends Controller
         TipoAumento::create($request->all());
 
         // Usamos la ruta adaptada 'tipos_aumentos.index'
-        return redirect()->route('tipos_Aumentos.index')->with('success', 'Tipo de Aumento agregado.');
+        return redirect()->route('tipo_Aumentos.index')->with('success', 'Tipo de Aumento agregado.');
     }
 
     public function edit($id)
