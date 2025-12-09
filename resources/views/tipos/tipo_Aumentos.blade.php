@@ -112,7 +112,7 @@
                     
                     // Configurar acción de Editar
                     btnEditar.onclick = function() {
-                        window.location.href = "{{ url('tipos_Aumentos') }}/" + selectedId + "/edit";
+                        window.location.href = "{{ url('tipo_Aumentos') }}/" + selectedId + "/edit";
                     };
 
                     // Configurar acción de Borrar (usando el formulario)
@@ -120,7 +120,7 @@
                         e.preventDefault();
                         if(confirm('¿Está seguro de que desea eliminar el Tipo de Aumento: ' + selectedTipo + '?')) {
                             // Configura la URL del formulario DELETE
-                            deleteForm.action = "{{ url('tipos_Aumentos') }}/" + selectedId;
+                            deleteForm.action = "{{ url('tipo_Aumentos') }}/" + selectedId;
                             deleteForm.submit();
                         }
                     };

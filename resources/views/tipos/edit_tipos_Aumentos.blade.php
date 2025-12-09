@@ -7,7 +7,7 @@
             <h4>Modificar Tipo de Aumento: {{ $tipoAumento->tipo }}</h4>
         </div>
         <div class="card-body">
-            <form action="{{ route('tipos_Aumentos.update', $tipoAumento->id) }}" method="POST">
+            <form action="{{ route('tipo_Aumentos.update', $tipoAumento->id) }}" method="POST">
                 @csrf
                 @method('PUT') 
 
@@ -34,7 +34,7 @@
                 
                 <div class="d-flex justify-content-start pt-3">
                     <button type="submit" class="btn btn-success me-2">Guardar Cambios</button>
-                    <a href="{{ route('tipos_Aumentos.index') }}" class="btn btn-secondary">Cancelar/Cerrar</a>
+                    <a href="{{ route('tipo_Aumentos.index') }}" class="btn btn-secondary">Cancelar/Cerrar</a>
                 </div>
             </form>
         </div>

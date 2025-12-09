@@ -7,7 +7,7 @@
             <h4>Agregar Nuevo Tipo de Aumento</h4>
         </div>
         <div class="card-body">
-            <form action="{{ route('tipos_Aumentos.store') }}" method="POST">
+            <form action="{{ route('tipo_Aumentos.store') }}" method="POST">
                 @csrf
                 
                 {{-- Campo Tipo (antes Código) --}}
@@ -30,7 +30,7 @@
                 
                 <div class="d-flex justify-content-start pt-3">
                     <button type="submit" class="btn btn-success me-2">Guardar</button>
-                    <a href="{{ route('tipos_Aumentos.index') }}" class="btn btn-secondary">Cancelar/Cerrar</a>
+                    <a href="{{ route('tipo_Aumentos.index') }}" class="btn btn-secondary">Cancelar/Cerrar</a>
                 </div>
             </form>
         </div>

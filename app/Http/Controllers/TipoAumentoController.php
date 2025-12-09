@@ -12,7 +12,7 @@ class TipoAumentoController extends Controller
     {
         $tiposAumento = TipoAumento::all();
         // Usamos la vista solicitada 'tipos.tipos_Aumentos'
-        return view('tipos.tipos_Aumentos', compact('tiposAumento'));
+        return view('tipos.tipo_Aumentos', compact('tiposAumento'));
     }
 
     public function create()
@@ -53,7 +53,7 @@ class TipoAumentoController extends Controller
         $tipoAumento->update($request->all());
 
         // Usamos la ruta adaptada 'tipos_aumentos.index'
-        return redirect()->route('tipos_Aumentos.index')
+        return redirect()->route('tipo_Aumentos.index')
                          ->with('success', 'Tipo de Aumento actualizado correctamente');
     }
 
@@ -62,23 +62,23 @@ class TipoAumentoController extends Controller
         $tipoAumento = TipoAumento::find($id);
 
         if (!$tipoAumento) {
-            return redirect()->route('tipos_Aumentos.index')
+            return redirect()->route('tipo_Aumentos.index')
                              ->with('error', 'El registro que intentas eliminar ya no existe o fue movido.');
         }
         
         try {
             $tipoAumento->delete();
             
-            return redirect()->route('tipos_Aumentos.index')
+            return redirect()->route('tipo_Aumentos.index')
                              ->with('success', 'El tipo de aumento fue eliminado exitosamente.');
 
         } catch (QueryException $e) {
             // Manejo de error de clave foránea
-            return redirect()->route('tipos_Aumentos.index')
+            return redirect()->route('tipo_Aumentos.index')
                              ->with('error', '🚫 No se puede eliminar este tipo de aumento. Está asociado a otros registros.');
             
         } catch (\Exception $e) {
-            return redirect()->route('tipos_Aumentos.index')
+            return redirect()->route('tipo_Aumentos.index')
                              ->with('error', 'Ocurrió un error inesperado al intentar eliminar el registro.');
         }
     }
