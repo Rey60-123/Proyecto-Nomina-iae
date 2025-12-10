@@ -10,6 +10,13 @@ use App\Http\Controllers\TipoAumentoController;
 use App\Http\Controllers\GuarderiaController;
 use App\Http\Controllers\TipoLiquidacionController;
 use App\Http\Controllers\TipoAusenciaController;
+/// niveles funcionales//
+use App\Http\Controllers\PresupuestoController;
+use App\Http\Controllers\DireccionController;
+use App\Http\Controllers\DepartamentoController;
+
+
+
 
 Route::get('/', function () {
     return view('layouts.pantalla_principal');
@@ -48,4 +55,7 @@ Route::resource('tipo_Aumentos', TipoAumentoController::class);
 Route::resource('Guarderias', GuarderiaController::class);
 Route::resource('tipo_Liquidacion', TipoLiquidacionController::class);
 
-Route::resource('tipo_ausencia', TipoAusenciaController::class);
+//niveles funcionales//
+Route::resource('presupuesto', PresupuestoController::class);
+Route::resource('direcciones', DireccionController::class);
+Route::resource('departamentos', DepartamentoController::class);

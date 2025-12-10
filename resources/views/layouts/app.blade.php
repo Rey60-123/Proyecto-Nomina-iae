@@ -21,9 +21,28 @@
 
             {{-- Opción 1: Sin Submenú --}}
             <li><a class="dropdown-item" href="#">Opción 1: Usuarios</a></li>
+             
+            
+            
+            {{-- SEPARADOR --}}
+            <li><hr class="dropdown-divider"></li>
+            
+            {{-- **OPCIÓN 2: Niveles Funcionales (CON SUBMENÚ DESPLEGABLE)** --}}
+            <li class="nav-item dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" id="submenuTipos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    ✨ **2. Niveles Funcionales**
+                </a>
+                {{-- Contenedor del Submenú --}}
+                <ul class="dropdown-menu" aria-labelledby="submenuTipos">
+                    {{-- Rutas Solicitadas --}}
+                    <li><h6 class="dropdown-header"> Gestionar Niveles Funcionales </h6></li>
+                    <li><a class="dropdown-item" href="{{ route('presupuesto.index') }}">Presupuesto</a></li>
+                    <li><a class="dropdown-item" href="{{ route('direcciones.index') }}">Direcciones</a></li>
+                    <li><a class="dropdown-item" href="{{ route('departamentos.index') }}">Departamentos</a></li>
+                    
+                </ul>
+            </li>
 
-            {{-- Opción 2: Sin Submenú --}}
-            <li><a class="dropdown-item" href="#">Opción 2: Perfiles</a></li>
 
             {{-- SEPARADOR --}}
             <li><hr class="dropdown-divider"></li>
@@ -45,7 +64,7 @@
                     <li><a class="dropdown-item" href="{{ route('tipo_Aumentos.index') }}">Tipo de Aumentos</a></li>
                     <li><a class="dropdown-item" href="{{ route('Guarderias.index') }}">Tipo de Guarderias</a></li>
                     <li><a class="dropdown-item" href="{{ route('tipo_Liquidacion.index') }}">Tipo de Liquidaciones</a></li>
-                    <li><a class="dropdown-item" href="{{ route('tipo_ausencia.index') }}">Tipo de Ausencias</a></li>
+                    <li><a class="dropdown-item" href="{{ route('tipo_ausencias.index') }}">Tipo de Ausencias</a></li>
                 </ul>
             </li>
 
